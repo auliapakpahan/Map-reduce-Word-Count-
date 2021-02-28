@@ -1,12 +1,14 @@
 #!/usr/bin/env python
+"""mapper.py"""
 
 import sys
 
-def run_map(f):
-    for line in f:
-        data = line.rstrip().split()
-    for word in data:
-        print(word)
-
-if __name__ == '__main__':
-    run_map(sys.stdin)
+for line in sys.stdin:
+ 
+    line = line.strip()
+   
+    words = line.split()
+ 
+    for word in words:
+       
+        print ('%s\t%s' % (word, 1))
